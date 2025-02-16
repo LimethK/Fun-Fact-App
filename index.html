@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts About Cats</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        button {
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts About Cats</h1>
+        <button id="generate-fact">Generate Random Cat Fact</button>
+        <p id="fact-display"></p>
+    </div>
+    <script>
+        const facts = [
+            "Cats have five toes on their front paws, but only four toes on their back paws.",
+            "A group of cats is called a clowder.",
+            "Cats can make over 100 different sounds, while dogs can only make about 10.",
+            "The world's largest cat measured 48.5 inches long.",
+            "Cats sleep for 70% of their lives.",
+            "A cat's nose print is unique, much like a human's fingerprint.",
+            "The oldest known pet cat lived to be 38 years old.",
+            "Cats can rotate their ears 180 degrees.",
+            "The average cat sleeps 12-16 hours a day.",
+            "Cats have a special reflective layer behind their retinas called the tapetum lucidum, which helps them see in low light."
+        ];
+
+        document.getElementById('generate-fact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact-display').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
